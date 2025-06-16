@@ -2,20 +2,28 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<div class="container py-3">
+    <div class="text-center mb-4">
+        <h1>Profile Page</h1>
+    </div>
 
-<div>
-    <h1>Profile Page
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <form method="post" class="bg-light p-4 rounded shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="mb-0">Update your profile</h2>
+                    <a class="btn btn-warning btn-sm" href="{% url 'pass_change' %}">
+                        Change Password
+                    </a>
+                </div>
+                {% csrf_token %}
+                {{form | crispy}}
+                <div class="text-center mt-4">
+                    <button class="btn btn-warning px-4 py-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
-
-<form style="width:50% ; margin : auto" method="post">
-    <h1>update your profile</h1>
-    <a class="btn btn-warning btn-sm" href="{% url 'pass_change' %}">Change your password</a>
-    {% csrf_token %}
-{{form | crispy}}
-
-<button class="btn btn-warning mb-5">Submit</button>
-
-
 {% endblock %}
-
