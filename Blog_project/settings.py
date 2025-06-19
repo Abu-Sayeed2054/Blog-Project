@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x#xm0wm60k$^jy85&&dnj$)0xxs0k6@z^e@3c#rw8rk=4lu8py
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://bank-management-bt05.onrender.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://blog-project-67q9.onrender.com ','https://*.127.0.0.1']
 
 
 
